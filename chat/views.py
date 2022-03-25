@@ -64,6 +64,7 @@ def getContacts(request):
 
 
 def getMessages(request):
+    print(request.user)
     id = request.GET.get('id')
     user = request.user
     other_user = get_object_or_404(User,id=id)
